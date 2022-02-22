@@ -1,0 +1,16 @@
+<h1><%= @place.name %></h1>
+
+
+<ul>
+  <% for place in @place.post %>
+    <li><%= "#{post}" %></li>
+  <% end %>
+</ul>
+
+<p>
+  <a href="/posts/new?post_id=<%= @place.id %>">New Post</a>
+</p>
+
+<p><a href="/place">Back to All Posts</a></p>
+
+<p><%= button_to "Delete this Place", @place, method: :delete %></p>
