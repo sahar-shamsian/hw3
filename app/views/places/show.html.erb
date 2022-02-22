@@ -1,9 +1,12 @@
 <h1><%= @place.name %></h1>
 
+<h3>Posts</h3>
 
 <ul>
-  <% for place in @place.posts %>
-    <li><%= "#{post}" %></li>
+  <% for post in @place.posts %>
+    <p> <h4> <li><%= "Title: #{post.title}"%> </h4> </p>
+    <p> <%= "Date: #{post.posted_on}"%> </p>
+    <p> <%= "Description: #{post.description}"%> </p>
   <% end %>
 </ul>
 
@@ -13,4 +16,4 @@
 
 <p><a href="/places">Back to All Places</a></p>
 
-<p><%= button_to "Delete this Place", @place, method: :delete %></p>
+<p><%= button_to "Delete this place", @place, method: :delete %></p>
